@@ -1,7 +1,15 @@
 package My_Com;
 
 public enum Status {
+//    Малыш
+
     Move,
     NotAfraid,
-    Help
+    Afraid,
+//    Карлосон
+
+    Help,
+    Unhelp
+//    Фрекинбок
+
 }

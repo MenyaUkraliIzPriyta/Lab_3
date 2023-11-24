@@ -8,6 +8,8 @@ public abstract class Person {
         this.name = name;
         this.stat = stat;
     }
-
+    public Status get() {
+        return this.stat;
+    }
 
 }
