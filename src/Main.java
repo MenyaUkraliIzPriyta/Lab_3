@@ -1,6 +1,4 @@
-import My_Com.Baby;
-import My_Com.Status;
-import My_Com.Tamer;
+import My_Com.*;
 
 //        А Малыш храбро двинулся на кухню.
 //        Теперь, когда ему помогал лучший
@@ -14,20 +12,22 @@ import My_Com.Tamer;
 public class Main {
     public static void main(String[] args) {
 
+        Fields field1 = new Fields("душевая");
+        Fields field2 = new Fields("кухня");
         Baby mal1 = new Baby("Малыш", Status.Move);
-        mal1.dosomething();
+        mal1.dosomething(field1.getPlace());
 
         Tamer karl = new Tamer("укротитель", Status.Unhelp);
         karl.dosomething();
 
         if (karl.get() == Status.Help){
             Baby mal2 = new Baby("Малыш", Status.NotAfraid);
-            mal2.dosomething();
+            mal2.dosomething(field2.getPlace());
         }
 
         if (karl.get() == Status.Unhelp) {
             Baby mal2 = new Baby("Малыш", Status.Afraid);
-            mal2.dosomething();
+            mal2.dosomething(field2.getPlace());
         }
     }
 }
