@@ -5,6 +5,7 @@ public class Fields {
     public Fields(String name ) {
         this.name = name;
 
+
     }
 
     public String getPlace() {

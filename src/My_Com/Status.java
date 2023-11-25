@@ -9,7 +9,9 @@ public enum Status {
 //    Карлосон
 
     Help,
-    Unhelp
+    Unhelp,
 //    Фрекинбок
+    Rejoice,
+    Burn
 
 }

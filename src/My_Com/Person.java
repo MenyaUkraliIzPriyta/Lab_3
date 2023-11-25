@@ -8,6 +8,10 @@ public abstract class Person {
         this.name = name;
         this.stat = stat;
     }
+    public Person(String name){
+        this.name = name;
+
+    }
     public Status get() {
         return this.stat;
     }

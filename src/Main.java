@@ -12,17 +12,28 @@ import My_Com.*;
 public class Main {
     public static void main(String[] args) {
 
-        Fields field1 = new Fields("душевая");
-        Fields field2 = new Fields("кухня");
+        Fields field1 = new Fields("кухню");
+        Fields field2 = new Fields("душевая");
         Baby mal1 = new Baby("Малыш", Status.Move);
+        Housewife fr = new Housewife("Фрекен Бок");
+        Author au = new Author("Автор");
         mal1.dosomething(field1.getPlace());
 
-        Tamer karl = new Tamer("укротитель", Status.Unhelp);
+        Tamer karl = new Tamer("укротитель", Status.Help);
         karl.dosomething();
 
         if (karl.get() == Status.Help){
             Baby mal2 = new Baby("Малыш", Status.NotAfraid);
             mal2.dosomething(field2.getPlace());
+            fr.dosomething();
+            mal2.understood(fr.get());
+
+            if (fr.get() == Status.Burn) {
+                au.say2();
+            }
+            if (fr.get() == Status.Rejoice) {
+                au.say1();
+            }
         }
 
         if (karl.get() == Status.Unhelp) {
