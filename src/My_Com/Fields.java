@@ -1,5 +1,6 @@
 package My_Com;
 
+// кухня, душевая, гостиная,
 public class Fields {
     public String name;
     public Fields(String name ) {
@@ -12,5 +13,13 @@ public class Fields {
         return this.name;
     }
 
+    public boolean checkPlace() {
+        if (name.equals("кухня") | name.equals("душевая") | name.equals("гостиная")) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
 }

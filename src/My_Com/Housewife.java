@@ -3,7 +3,7 @@ import java.lang.Math;
 
 public class Housewife extends Person implements doSome {
     public Status st;
-    protected double a = Math.random();
+    private double a = Math.random();
     public Housewife(String name){
         super(name);
     }
