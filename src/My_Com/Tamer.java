@@ -17,6 +17,7 @@ public class Tamer extends Person implements doSome{
         }
     }
 
+    @Override
     public Status get() {
         return this.stat;
     }

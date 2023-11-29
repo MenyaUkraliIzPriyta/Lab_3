@@ -14,7 +14,7 @@ public class Fields {
     }
 
     public boolean checkPlace() {
-        if (name.equals("кухня") | name.equals("душевая") | name.equals("гостиная")) {
+        if (name.equals("кухня") | name.hashCode() == ("душевая").hashCode() | name.equals("гостиная")) {
             return true;
         }
         else {

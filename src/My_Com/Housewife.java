@@ -8,6 +8,7 @@ public class Housewife extends Person implements doSome {
         super(name);
     }
 
+    @Override
     public void dosomething() {
         if (a >= 0.5) {
             st = Status.Rejoice;
@@ -22,6 +23,7 @@ public class Housewife extends Person implements doSome {
 
     }
 
+    @Override
     public Status get() {
         return st;
     }
