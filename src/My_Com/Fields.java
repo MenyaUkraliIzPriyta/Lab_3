@@ -1,6 +1,6 @@
 package My_Com;
 
-// кухня, душевая, гостиная,
+// кухня, душевая, гостиная
 public class Fields {
     public String name;
     public Fields(String name ) {
