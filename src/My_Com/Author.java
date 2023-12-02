@@ -6,12 +6,14 @@ public class Author implements Speech{
         this.name = name;
     }
     @Override
-    public void say1() {
-        System.out.println("Малышу повезло и он хорошо провел время.");
+    public String say1() {
+
+        return ("Пацану повезло и он хорошо провел время.");
     }
 
     @Override
-    public void say2() {
-        System.out.println("Должно быть, есть мучное вредно только детям.");
+    public String say2() {
+
+        return ("Должно быть, есть мучное вредно только детям.");
     }
 }

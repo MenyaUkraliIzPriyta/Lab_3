@@ -1,5 +1,5 @@
 package My_Com;
-
+//return
 public class Baby extends Person implements doSome {
 
     public Baby(String name, Status stat) {
@@ -7,59 +7,61 @@ public class Baby extends Person implements doSome {
 
     }
 
-    public void dosomething() {
-
+    public String dosomething() {
+        return "Ошибка в статусе Baby.class: неверный статус";
     }
-    public void dosomething(String obj) {
+    public String dosomething(String obj) {
         if (obj.equals("кухня")) {
-            if (stat == Status.Move) {
-                System.out.println(name + " храбро двинулся на кухню.");
+            if (stat == Status.MOVE) {
+                return (name + " храбро двинулся на кухню.");
             }
 
-            if (stat == Status.NotAfraid) {
-                System.out.println(" ему нечего было бояться.");
+            if (stat == Status.NOTAFRAID) {
+                return (" ему нечего было бояться.");
             }
 
-            if (stat == Status.Afraid) {
-                System.out.println(" поэтому он испугался и побежал на кухню.");
+            if (stat == Status.AFRAID) {
+                return (" поэтому он испугался и побежал на кухню.");
             }
         }
         if (obj.equals("гостиная")) {
-            if (stat == Status.Move) {
-                System.out.println(name + " храбро двинулся в в гостиную.");
+            if (stat == Status.MOVE) {
+                return (name + " храбро двинулся в в гостиную.");
             }
 
-            if (stat == Status.NotAfraid) {
-                System.out.println(" ему нечего было бояться.");
+            if (stat == Status.NOTAFRAID) {
+                return (" ему нечего было бояться.");
             }
 
-            if (stat == Status.Afraid) {
-                System.out.println(" поэтому он испугался и побежал в гостиную.");
+            if (stat == Status.AFRAID) {
+                return (" поэтому он испугался и побежал в гостиную.");
             }
         }
         if (obj.equals("душевая")) {
-            if (stat == Status.Move) {
-                System.out.println(name + " храбро двинулся в душевую.");
+            if (stat == Status.MOVE) {
+                return (name + " храбро двинулся в душевую.");
             }
 
-            if (stat == Status.NotAfraid) {
-                System.out.println(" ему нечего было бояться.");
+            if (stat == Status.NOTAFRAID) {
+                return (" ему нечего было бояться.");
             }
 
-            if (stat == Status.Afraid) {
-                System.out.println(" поэтому он испугался и побежал в душевую.");
+            if (stat == Status.AFRAID) {
+                return (" поэтому он испугался и побежал в душевую.");
             }
         }
+        return "Ошибка в статусе Baby.class: неверный статус";
     }
 
-    public void understood(Status obj) {
-        if (obj == Status.Rejoice) {
-            System.out.println("Малыш прекрасно понимал, что она хочет с кем-нибудь поговорить и попить кофе со свежими печеньками.");
+    public String understood(Status obj) {
+        if (obj == Status.REJOICE) {
+            return ("Малыш прекрасно понимал, что она хочет с кем-нибудь поговорить и попить кофе со свежими печеньками.");
         }
-        if (obj == Status.Burn) {
-            System.out.println("Малыш прекрасно понимал, что она собиралась провести в тишине несколько приятных минут, заедая кофе свежими плюшками.");
+        if (obj == Status.BURN) {
+            return ("Малыш прекрасно понимал, что она собиралась провести в тишине несколько приятных минут, заедая кофе свежими плюшками.");
 
         }
+        return "Ошибка в статусе Baby.class: неверный статус";
 
     }
 

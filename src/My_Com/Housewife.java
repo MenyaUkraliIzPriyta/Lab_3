@@ -9,18 +9,17 @@ public class Housewife extends Person implements doSome {
     }
 
     @Override
-    public void dosomething() {
+    public String dosomething() {
         if (a >= 0.5) {
-            st = Status.Rejoice;
-            System.out.println( "На этот раз " + name +  " очень обрадовалась его появлению.");
-
+            st = Status.REJOICE;
+            return ( "На этот раз " + name +  " очень обрадовалась его появлению.");
         }
         if (a < 0.5) {
-            st = Status.Burn;
-            System.out.println( "На этот раз " + name +  " вовсе не обрадовалась его появлению.");
-            System.out.println("Она как раз варила себе кофе.");
-        }
+            st = Status.BURN;
+            return ( "На этот раз " + name +  " вовсе не обрадовалась его появлению.\"Она как раз варила себе кофе.\"");
 
+        }
+        return "Ошибка в статусе Housewife.class: неверный статус";
     }
 
     @Override

@@ -1,18 +1,20 @@
 package My_Com;
 
+//Caps
+
 public enum Status {
 //    Малыш
 
-    Move,
-    NotAfraid,
-    Afraid,
+    MOVE,
+    NOTAFRAID,
+    AFRAID,
 //    Карлосон
 
-    Help,
-    Unhelp,
+    HELP,
+    UNHELP,
 //    Фрекинбок
 
-    Rejoice,
-    Burn
+    REJOICE,
+    BURN
 
 }

@@ -7,14 +7,15 @@ public class Tamer extends Person implements doSome{
     }
 
 
-    public void dosomething() {
-        if (stat == Status.Help) {
-            System.out.print("Ему помогал лучший в мире " + name + " домомучительниц,");
+    public String dosomething() {
+        if (stat == Status.HELP) {
+            return ("Ему помогал лучший в мире " + name + " домомучительниц,");
         }
-        if (stat == Status.Unhelp) {
-            System.out.print("Ему не помогал лучший в мире " + name + " домомучительниц,");
+        if (stat == Status.UNHELP) {
+            return ("Ему не помогал лучший в мире " + name + " домомучительниц,");
 
         }
+        return "Ошибка в статусе Housewife.class: неверный статус";
     }
 
     @Override
