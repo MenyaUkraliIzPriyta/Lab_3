@@ -64,5 +64,4 @@ public class Baby extends Person implements doSome {
         return "Ошибка в статусе Baby.class: неверный статус";
 
     }
-
 }

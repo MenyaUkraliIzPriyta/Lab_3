@@ -11,6 +11,7 @@ import My_Com.*;
         Должно быть, есть мучное вредно только детям.
 
  */
+
 public class Main {
     public static void main(String[] args) {
 
