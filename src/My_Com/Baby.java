@@ -1,4 +1,7 @@
 package My_Com;
+
+import Exceptions.IncorrectdoSomethingException;
+
 //return
 public class Baby extends Person implements doSome {
 
@@ -7,62 +10,69 @@ public class Baby extends Person implements doSome {
 
     }
 
-    public String dosomething() {
-        return "Ошибка в статусе Baby.class: неверный статус";
+    public void dosomething() {
+        System.out.println("Ошибка в статусе Baby.class: неверный статус");
     }
-    public String dosomething(String obj) {
+    public void dosomething(String obj) throws IncorrectdoSomethingException {
         if (obj.equals("кухня")) {
             if (stat == Status.MOVE) {
-                return (name + " храбро двинулся на кухню.");
+                System.out.println(name + " храбро двинулся на кухню.");
             }
 
-            if (stat == Status.NOTAFRAID) {
-                return (" ему нечего было бояться.");
+            else if (stat == Status.NOTAFRAID) {
+                System.out.println("ему нечего было бояться.");
             }
 
-            if (stat == Status.AFRAID) {
-                return (" поэтому он испугался и побежал на кухню.");
+            else if (stat == Status.AFRAID) {
+                System.out.println(" поэтому он испугался и побежал на кухню.");
             }
+            else
+                throw new IncorrectdoSomethingException("Ошибка в статусе Baby.class: неверный статус");
         }
         if (obj.equals("гостиная")) {
             if (stat == Status.MOVE) {
-                return (name + " храбро двинулся в в гостиную.");
             }
 
-            if (stat == Status.NOTAFRAID) {
-                return (" ему нечего было бояться.");
+            else if (stat == Status.NOTAFRAID) {
+                System.out.println(" ему нечего было бояться.");
             }
 
-            if (stat == Status.AFRAID) {
-                return (" поэтому он испугался и побежал в гостиную.");
+            else if (stat == Status.AFRAID) {
+                System.out.println(" поэтому он испугался и побежал в гостиную.");
             }
+            throw new IncorrectdoSomethingException("Ошибка в статусе Baby.class: неверный статус");
         }
         if (obj.equals("душевая")) {
             if (stat == Status.MOVE) {
-                return (name + " храбро двинулся в душевую.");
+                System.out.println(name + " храбро двинулся в душевую.");
             }
 
-            if (stat == Status.NOTAFRAID) {
-                return (" ему нечего было бояться.");
+            else if (stat == Status.NOTAFRAID) {
+                System.out.println(" ему нечего было бояться.");
             }
 
-            if (stat == Status.AFRAID) {
-                return (" поэтому он испугался и побежал в душевую.");
+            else if (stat == Status.AFRAID) {
+                System.out.println(" поэтому он испугался и побежал в душевую.");
             }
+            else {
+                throw new IncorrectdoSomethingException("Ошибка в статусе Baby.class: неверный статус");
+            }
+
         }
-        return "Ошибка в статусе Baby.class: неверный статус";
+
     }
 
-    public String understood(Status obj) {
+    public void understood(Status obj) throws IncorrectdoSomethingException  {
         if (obj == Status.REJOICE) {
-            return ("Малыш прекрасно понимал, что она хочет с кем-нибудь поговорить и попить кофе со свежими печеньками.");
+            System.out.println("Малыш прекрасно понимал, что она хочет с кем-нибудь поговорить и попить кофе со свежими печеньками.");
         }
-        if (obj == Status.BURN) {
-            return ("Малыш прекрасно понимал, что она собиралась провести в тишине несколько приятных минут, заедая кофе свежими плюшками.");
+        else if (obj == Status.BURN) {
+            System.out.println("Малыш прекрасно понимал, что она собиралась провести в тишине несколько приятных минут, заедая кофе свежими плюшками.");
 
         }
-        return "Ошибка в статусе Baby.class: неверный статус";
-
+        else {
+            throw new IncorrectdoSomethingException("Ошибка в статусе Baby.class: неверный статус");
+        }
     }
 
 }

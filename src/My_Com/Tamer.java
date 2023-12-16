@@ -1,5 +1,7 @@
 package My_Com;
 
+import Exceptions.IncorrectdoSomethingException;
+
 public class Tamer extends Person implements doSome{
 
     public Tamer(String name, Status stat){
@@ -7,15 +9,17 @@ public class Tamer extends Person implements doSome{
     }
 
 
-    public String dosomething() {
+    public void dosomething() throws IncorrectdoSomethingException {
         if (stat == Status.HELP) {
-            return ("Ему помогал лучший в мире " + name + " домомучительниц,");
+            System.out.println("Ему помогал лучший в мире " + name + " домомучительниц,");
         }
-        if (stat == Status.UNHELP) {
-            return ("Ему не помогал лучший в мире " + name + " домомучительниц,");
+        else if (stat == Status.UNHELP) {
+            System.out.println("Ему не помогал лучший в мире " + name + " домомучительниц,");
 
         }
-        return "Ошибка в статусе Housewife.class: неверный статус";
+        else {
+            throw new IncorrectdoSomethingException("Ошибка в статусе Tamer.class: неверный статус");
+        }
     }
 
     @Override

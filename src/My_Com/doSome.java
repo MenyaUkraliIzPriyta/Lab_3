@@ -1,6 +1,8 @@
 package My_Com;
 
+import Exceptions.IncorrectdoSomethingException;
+
 public interface doSome {
-     String dosomething();
+     void dosomething() throws IncorrectdoSomethingException;
 
 }

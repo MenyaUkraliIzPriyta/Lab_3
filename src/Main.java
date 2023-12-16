@@ -1,3 +1,4 @@
+import Exceptions.IncorrectdoSomethingException;
 import My_Com.*;
 
 /*      А Малыш храбро двинулся на кухню.
@@ -22,30 +23,53 @@ public class Main {
             Baby mal1 = new Baby("Малыш", Status.MOVE);
             Housewife fr = new Housewife("Фрекен Бок");
             Author au = new Author("Автор");
-            System.out.println(mal1.dosomething(field1.getPlace()));
+            try {
+                mal1.dosomething(field1.getPlace());
+            }
 
+            catch (IncorrectdoSomethingException e) {
+                System.out.println(e.getMessage());
+            }
             Tamer karl = new Tamer("укротитель", Status.HELP);
-            System.out.print(karl.dosomething());
+            try {
+                karl.dosomething();
+            } catch (IncorrectdoSomethingException e) {
+                System.out.println(e.getMessage());
+            }
 
             if (karl.get() == Status.HELP) {
 
                 Baby mal2 = new Baby("Малыш", Status.NOTAFRAID);
-                System.out.println(mal2.dosomething(field2.getPlace()));
-                System.out.println(fr.dosomething());
-                System.out.println(mal2.understood(fr.get()));
+
+                try {
+                    mal2.dosomething(field2.getPlace());
+                } catch (IncorrectdoSomethingException e) {
+                    System.out.println(e.getMessage());
+                }
+                fr.dosomething();
+
+                try {
+                    mal2.understood(fr.get());
+                } catch (IncorrectdoSomethingException e) {
+                    System.out.println(e.getMessage());
+                }
 
                 if (fr.get() == Status.BURN) {
-                    System.out.println(au.say2());
+                    au.say2();
                 }
                 if (fr.get() == Status.REJOICE) {
-                    System.out.println(au.say1());
+                    au.say1();
                 }
             }
 
             if (karl.get() == Status.UNHELP) {
 
                 Baby mal2 = new Baby("Малыш", Status.AFRAID);
-                System.out.println(mal2.dosomething(field2.getPlace()));
+                try {
+                    mal2.dosomething(field2.getPlace());
+                } catch (IncorrectdoSomethingException e) {
+                    System.out.println(e.getMessage());
+                }
             }
         }
 
