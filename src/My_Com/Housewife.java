@@ -27,4 +27,20 @@ public class Housewife extends Person implements doSome {
     public Status get() {
         return st;
     }
+
+    public class Frak extends Housewife {
+        public Frak(String name){
+            super(name);
+        }
+        @Override
+        public void dosomething() {
+            if (a >= 0.5) {
+                System.out.println(this.name + " ничего не заметила.");
+            }
+            else {
+                System.out.println(this.name + " быстрым шагом направилась к Малышу.");
+            }
+        }
+
+    }
 }

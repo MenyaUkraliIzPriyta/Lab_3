@@ -1,6 +1,6 @@
 package My_Com;
 
 public interface Speech {
-    String say1();
-    String say2();
+    void say1();
+    void say2();
 }

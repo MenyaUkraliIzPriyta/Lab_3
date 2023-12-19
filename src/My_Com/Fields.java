@@ -1,5 +1,7 @@
 package My_Com;
 
+import Exceptions.NameOrEmptyException;
+
 import java.util.Objects;
 
 // кухня, душевая, гостиная
@@ -21,6 +23,15 @@ public class Fields {
         }
         else {
             return false;
+        }
+    }
+
+    public void check() throws NameOrEmptyException {
+        if (name.equals("кухня") | name.hashCode() == ("душевая").hashCode() | name.equals("гостиная")) {
+            System.out.println("Места опознаны");
+        }
+        else {
+            throw new NameOrEmptyException("Посмотрите возможные места объекта");
         }
     }
 

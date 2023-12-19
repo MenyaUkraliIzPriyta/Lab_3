@@ -6,14 +6,22 @@ public class Author implements Speech{
         this.name = name;
     }
     @Override
-    public String say1() {
+    public void say1() {
 
-        return ("Пацану повезло и он хорошо провел время.");
+        System.out.println("Пацану повезло и он хорошо провел время.");
     }
 
     @Override
-    public String say2() {
+    public void say2() {
 
-        return ("Должно быть, есть мучное вредно только детям.");
+        System.out.println("Должно быть, есть мучное вредно только детям.");
+    }
+
+    // вложенный внутренний класс
+    public class Baby_mind {
+        public void say() {
+            System.out.println("Малой подумал, что теперь самое время с ней заговорить.");
+        }
+
     }
 }

@@ -23,7 +23,11 @@ public class Main {
 
             Baby mal1 = new Baby("Малыш", Status.MOVE);
             Housewife fr = new Housewife("Фрекен Бок");
+            Housewife fraak = new Housewife("Фрекен Бок").new Frak("Тетка");
             Author au = new Author("Автор");
+            Author.Baby_mind mind = au.new Baby_mind();
+            Baby.Baby_hear hr = new My_Com.Baby.Baby_hear();
+
             try {
                 mal1.dosomething(field1.getPlace());
             }
@@ -32,6 +36,8 @@ public class Main {
                 System.out.println(e.getMessage());
             }
             Tamer karl = new Tamer("укротитель", Status.HELP);
+            Tamer.Movies m = karl.get_move();
+
             try {
                 karl.dosomething();
             } catch (IncorrectdoSomethingException e) {
@@ -72,11 +78,17 @@ public class Main {
                     System.out.println(e.getMessage());
                 }
             }
+            mind.say();
+            hr.hear();
+            m.move1();
+            m.move2();
+            fraak.dosomething();
         }
 
         else {
 
             System.out.println("Похоже место персонажа не определилось.");
         }
+
     }
 }

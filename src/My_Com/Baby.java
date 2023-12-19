@@ -74,4 +74,10 @@ public class Baby extends Person implements doSome {
             throw new IncorrectdoSomethingException("Ошибка в статусе Baby.class: неверный статус");
         }
     }
+    public static class Baby_hear {
+        public void hear() {
+            System.out.println("И в это мгновение он услышал знакомое слабое жужжание у окна.");
+        }
+    }
+
 }
